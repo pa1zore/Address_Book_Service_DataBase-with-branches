@@ -97,3 +97,19 @@ group by state,city;
 
 select first_name , city from contact_table
 order by first_name;
+
+alter table contact_table
+add type varchar(255);
+select * from contact_table;
+
+update  contact_table
+set type='friend'
+where first_name='david';
+
+update  contact_table
+set type='friend'
+where first_name='michle';
+
+update  contact_table
+set type='family'
+where first_name='brotwan';
