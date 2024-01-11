@@ -34,4 +34,17 @@ insert into contact_table(first_name,last_name,address,city,state,zip,phone_numb
 ('david','warner','n5s3,sojanaager,kalegaon','mumbai','maharashtra','345543','000000000','warner@gmail.com'),
 ('michle','hustey','ere,sdf,kalegaon','pune','maharashtra','333333','1111111111','michel@gmail.com');
 
+/*
+UC4 ability to edit existing constact details based on their name
+in the address book system
+*/
 
+-- to update we need to set sefe mood update =0
+SET SQL_SAFE_UPDATES = 0;
+
+update contact_table
+set address= 'govandi', city='kharghar', state='gujrat',email='updated@gamil.com',zip='999999'
+WHERE first_name='david';
+
+-- again I have set safe mood upadate to  1 to not change values in shell 
+SET SQL_SAFE_UPDATES = 1;
