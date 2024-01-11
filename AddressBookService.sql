@@ -102,6 +102,11 @@ alter table contact_table
 add type varchar(255);
 select * from contact_table;
 
+/*
+ UC9 ability to retriveve entries sorted alphabatically by perosn's name for 
+ a given city
+*/
+
 update  contact_table
 set type='friend'
 where first_name='david';
@@ -113,3 +118,12 @@ where first_name='michle';
 update  contact_table
 set type='family'
 where first_name='brotwan';
+
+/*
+ UC10 ability to get number of contact persons
+ 
+*/
+
+select type, count(*) from contact_table
+group by type;
+
