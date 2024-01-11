@@ -48,3 +48,20 @@ WHERE first_name='david';
 
 -- again I have set safe mood upadate to  1 to not change values in shell 
 SET SQL_SAFE_UPDATES = 1;
+
+/*
+UC5
+ability to delete person using person's name
+*/
+
+
+-- to delete contact based on name first we need to set safe mode =0
+SET SQL_SAFE_UPDATES = 0;
+
+delete from contact_table
+where first_name='michle';
+
+
+-- to again set safe mood on
+SET SQL_SAFE_UPDATES = 1;
+
