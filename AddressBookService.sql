@@ -87,3 +87,13 @@ insert into contact_table(first_name,last_name,address,city,state,zip,phone_numb
 
 select city,state , count(*) from contact_table
 group by state,city;
+
+
+
+/*
+ UC8 ability to retriveve entries sorted alphabatically by perosn's name for 
+ a given city
+*/
+
+select first_name , city from contact_table
+order by first_name;
