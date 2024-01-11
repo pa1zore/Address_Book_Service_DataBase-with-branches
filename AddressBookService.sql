@@ -65,3 +65,11 @@ where first_name='michle';
 -- to again set safe mood on
 SET SQL_SAFE_UPDATES = 1;
 
+/*
+UC6 ability to retrieve person belonging to a City or state form 
+the address book
+*/
+
+select * from contact_table
+where city='pune' or state='maharashtra';
+
