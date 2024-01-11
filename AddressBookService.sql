@@ -43,7 +43,7 @@ in the address book system
 SET SQL_SAFE_UPDATES = 0;
 
 update contact_table
-set address= 'govandi', city='kharghar', state='gujrat',email='updated@gamil.com',zip='999999'
+set address= 'govandi', city='mumbai', state='maharashtra',email='updated@gamil.com',zip='999999'
 WHERE first_name='david';
 
 -- again I have set safe mood upadate to  1 to not change values in shell 
@@ -73,3 +73,17 @@ the address book
 select * from contact_table
 where city='pune' or state='maharashtra';
 
+/*
+ UC7 ability to understanda the size of address book by city  and state
+
+*/
+
+use  address_book_service;
+
+select * from contact_table;
+
+insert into contact_table(first_name,last_name,address,city,state,zip,phone_number,email) values
+('brotwan','warner','asdf,kalegaon','mumbai','maharashtra','987','7777777777','warner@gmail.com');
+
+select city,state , count(*) from contact_table
+group by state,city;
