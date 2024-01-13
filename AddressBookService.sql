@@ -119,11 +119,14 @@ update  contact_table
 set type='family'
 where first_name='brotwan';
 
-/*
- UC10 ability to get number of contact persons
- 
-*/
+-- UC10: Ability to get the number of contact persons by type
+SELECT type, COUNT(*) AS count_by_type
+FROM contact_table
+GROUP BY type;
 
-select type, count(*) from contact_table
-group by type;
+-- UC11: ability to add person in both friend and family
+
+insert into contact_table(first_name,last_name,address,city,state,zip,phone_number,email,type) values
+('mark','clark','n5s3,sojanaager,kalegaon','mumbai','maharashtra','345543','000055000','warner@gmail.com','friend'),
+('stuart','binny','ere,sdf,kalegaon','pune','maharashtra','333333','1111111661','michel@gmail.com','family');
 
